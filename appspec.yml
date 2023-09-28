@@ -16,26 +16,26 @@ permissions:
 hooks:
 
   BeforeInstall:
-    - location: before_install.sh
+    - location: /before_install.sh
       timeout: 300
       runas: root
   
   AfterInstall:
-    - location: after_install.sh
+    - location: /after_install.sh
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: app_start.sh
+    - location: /app_start.sh
       timeout: 300
       runas: root
 
   AfterInstall:
-      - location: after_install.sh
+      - location: /after_install.sh
         timeout: 1000
         runas: root
 
   ApplicationStart:
-    - location: start_server.sh     
+    - location: /start_server.sh     
       timeout: 300
       runas: root
